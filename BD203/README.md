@@ -1,3 +1,3 @@
 # Practica-BD-II
-Creacion de una red social__
+Creacion de una red social<br />
 EL LOGIN LO HA CREADO ARYA (NIE X7682807, POR TANTO, EL HTML PRINCIPAL ESTÁ EN SU CARPETA)
