@@ -1,4 +1,4 @@
-# Practica-BD-II
+# Practica 2 - BDII
 Creacion de una red social para la asignatura BD II<br />
 
 ![Preview image](unigram.png)
