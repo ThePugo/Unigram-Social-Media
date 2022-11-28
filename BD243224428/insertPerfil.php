@@ -11,7 +11,7 @@
         $nombreUsuario=$_POST["nombreUsuario"];
         $string="INSERT into perfil set nombre = \"$nombre\", apellidos = \"$apellidos\", genero = \"$genero\", edad = \"$edad\", nombreUsuario = \"$nombreUsuario\"";
         if ($edad=="" || $nombreUsuario=="") {
-            echo "FALTAN DATOS MI COMPADRE METELOS BIEN DUROS AHI";
+            echo "Campo inválido";
         } else {
             echo "Creando perfil...";
             include "../conexiones.php";
