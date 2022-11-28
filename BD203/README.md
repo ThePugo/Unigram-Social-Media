@@ -1,3 +1,5 @@
 # Practica-BD-II
-Creacion de una red social<br />
-EL LOGIN LO HA CREADO ARYA (NIE X7682807, POR TANTO, EL HTML PRINCIPAL ESTÁ EN SU CARPETA)
+Creacion de una red social para la asignatura BD II<br />
+
+## Reparto de tareas 
+Usuarios - Arya Mangunsatya I Gusti Ngurah Agung - Carpeta BDX7682807
