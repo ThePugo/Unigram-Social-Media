@@ -21,7 +21,7 @@
             <?php echo "<h1>Bienvenido, $user</h1>";?>   
             <div class="navbar">
                 <ul>
-                    <li><a href="BD243223476/verPerfilPersonal.php?nombredeusuario=<?php echo $user ?>" class="linksnavbar">Ver mi perfil</a></li>
+                    <li><a href="BD243224428/verPerfilPersonal.php?nombredeusuario=<?php echo $user ?>" class="linksnavbar">Ver mi perfil</a></li>
                     <li>Mis publicaciones</li>
                     <li>Mis historias</li>
                     <li>Mis followers</li>
@@ -61,7 +61,7 @@
                     $usuarioPublicado=mysqli_query($conexio,$stringUsuario);
                     $usuario=mysqli_fetch_array($usuarioPublicado);
                     #ENLACE A PERFIL
-                    echo "<a href='BD243223476/verPerfilUsuario.php?nombredeusuario=$usuario[nombreUsuario]' class=linksposts>$usuario[nombreUsuario]</a>";?><br><br>
+                    echo "<a href='BD243224428/verPerfilUsuario.php?nombredeusuario=$usuario[nombreUsuario]' class=linksposts>$usuario[nombreUsuario]</a>";?><br><br>
                     <?php echo $reg["descripcion"];?>
                     <div class="date">
                         <?php echo $reg["fechaCreacion"];?>
