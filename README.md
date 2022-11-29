@@ -6,6 +6,6 @@ Creacion de una red social para la asignatura BD II<br />
 ## Reparto de tareas 
 Usuarios - Arya Mangunsatya I Gusti Ngurah Agung - Carpeta BDX7682807<br />
 Perfiles - Sasha Cammarata San Segundo - Carpeta BD243224428<br />
-Publicaciones - ... - Carpeta BD243223476<br />
-Mensajes - ... - Carpeta BD243475994
+Publicaciones - Mario Ventura Burgos - Carpeta BD243223476<br />
+Mensajes - José Enrique Sánchez Weiss - Carpeta BD243475994
 
