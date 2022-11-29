@@ -21,12 +21,12 @@
         if (mysqli_num_rows($consulta)!=0) {
             echo "EL NOMBRE DE USUARIO YA EXISTE. VUELVE A INTENTARLO CON UN NUEVO NOMBRE DE USUARIO";?>
             <head>
-                <meta http-equiv="refresh" content="2;url=profileform.php" />
+                <meta http-equiv="refresh" content="2;url=createAccountForm.html" />
             </head>
         <?php
         }
         else {
-            echo "Creando perfil...";
+            echo "Creando cuenta de usuario...";
             $insert=mysqli_query($conexio,$string);
         }
     ?>
