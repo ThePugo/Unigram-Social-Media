@@ -9,7 +9,7 @@
         
         <div class="profilebox">
             <div class="center">
-                <form method="post" action="insertPerfil.php">
+                <form method="post" action="insertUser.php">
 
                     <center>
                         <h2>CREA TU PERFIL</h2><br>
