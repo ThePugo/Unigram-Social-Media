@@ -57,7 +57,7 @@ body{
 }
 
 hr.round{
-    border-top: 8px solid darkblue;
+    border-top: 8px solid #0E0E52;
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -72,7 +72,7 @@ input[type=submit]{
     font-weight: bold;
     padding: 10px;
     margin-bottom: 30px;
-    background-color: darkblue;
+    background-color: #0E0E52;
     border-radius: 10px;
     border: none;
     color:white;
