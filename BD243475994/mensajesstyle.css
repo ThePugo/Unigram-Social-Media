@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: 'Bahnschrift';
+}
+.usersbox{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    color:black;
+    background-color: rgb(87, 158, 246);
+}
+
+.linksmessage{
+    text-decoration: none;
+    color:black;
+}
+
+#userbox{
+    color: black;
+    font-family: "Helvetica";
+    font-size: 10pt;
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #3399FF;
+    border-radius: 3px;
+    width: 200px;
+    height: 40px;	 
+    cursor: hand;
+    padding:5px;	
+}
+.displaymessage{
+    margin-left:200px;
+    height:auto;
+    width:auto;
+    background-color: red;
+    position:absolute;
+    background-size: cover;
+}
+
