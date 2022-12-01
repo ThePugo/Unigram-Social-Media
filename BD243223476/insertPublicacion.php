@@ -1,7 +1,7 @@
 <html>
     <!-- INSERTA EN LA BASE DE DATOS (CON SQL) LOS DATOS QUE ENCUENTRA EN EL FORM-->
     <head>
-        <meta http-equiv="refresh" content="2;url=../principal.php" />
+        <meta http-equiv="refresh" content="0;url=../principal.php" />
     </head>
     <?php
         $descripcion = $_POST["publicacion"];
@@ -12,7 +12,6 @@
         if ($descripcion=="" || $fechaCreacion=="" || $nombreUsuario=="") {
             echo "FALTAN DATOS MI COMPADRE METELOS BIEN DUROS AHI";
         } else {
-            echo $string;
             include "../conexiones.php";
             $insert=mysqli_query($conexio,$string);
         }
