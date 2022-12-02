@@ -27,6 +27,11 @@
     text-decoration: none;
 }
 
+.linksnavbarunread{
+    color: red;
+    text-decoration: none;
+}
+
 .linksposts{
     color:blue;
     text-decoration:none;
@@ -117,6 +122,6 @@ textarea{
 }
 
 .cerrarsesionli{
-    margin-left: 645px;
+    margin-left: 550px;
     color: white;
 }
