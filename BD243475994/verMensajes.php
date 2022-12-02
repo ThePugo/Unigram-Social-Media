@@ -8,7 +8,7 @@
         <div class = "chatmessagesbox">
             <div class = "chattitle">
                 <center>
-                    <h1>Chat con "Nombre de usuario"</h1>
+                    <h1>Chat con <?php echo $receptor ?></h1>
                     <hr>
                 </center>
             </div>
