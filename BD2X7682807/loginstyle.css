@@ -10,7 +10,7 @@
 body{
     background-image: linear-gradient(rgba(37, 33, 33, 0.75),rgb(86, 106, 219)), url(loginbg.jpg);
     background-repeat: no-repeat;
-    background-size: 650px 700px;
+    background-size: 775px 750px;
 }
 
 .registerbox{
@@ -26,7 +26,7 @@ body{
     align-items: center;
     box-shadow: 0 0 10px grey;
     margin-right: 55px;
-    margin-top: 35px;
+    margin-top: 45px;
 }
 
 .center{
