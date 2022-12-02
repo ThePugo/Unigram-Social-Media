@@ -14,14 +14,31 @@
 
     <body>
         <div class="headerbox">  
-            <?php echo "<h1>Bienvenido, $user</h1>";?>   
+            <?php 
+                echo "<h1>Bienvenido, $user</h1>";
+                #MIRA SI HAY MENSAJES SIN LEER
+                $stringMsj="SELECT COUNT(nombreReceptor) FROM mensaje WHERE nombreReceptor= '$user' AND leido= FALSE";
+                $consultaMsj= mysqli_query($conexio, $stringMsj);
+                $consultaArr = mysqli_fetch_array($consultaMsj);
+            ?>   
             <div class="navbar">
                 <ul>
                     <li><a href="BD243224428/verPerfil.php?nombredeusuario=<?php echo $user ?>" class="linksnavbar">Ver mi perfil</a></li>
                     <li>Mis publicaciones</li>
                     <li>Mis historias</li>
                     <li>Mis followers</li>
-                    <li><a href="BD243475994/mensajes.php"class="linksnavbar">Mensajes</a></li>
+                    <li>
+                        <?php
+                            if ($consultaArr["COUNT(nombreReceptor)"]>0) {?>
+                                <a href="BD243475994/mensajes.php"class="linksnavbarunread">Mensajes (<?php echo $consultaArr["COUNT(nombreReceptor)"].' '."sin leer)"?></a>
+                            <?php
+                            }
+                            else {?>
+                                <a href="BD243475994/mensajes.php"class="linksnavbar">Mensajes</a>
+                            <?php
+                            }
+                            ?>
+                    </li>
                     <div class="cerrarsesionli">
                         <li><a href="BD2X7682807/cierresesion.php" class="linksnavbar">Cerrar sesion</a></li>
                     </div> 
