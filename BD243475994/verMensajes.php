@@ -6,18 +6,28 @@
             include "../conexiones.php";
             $receptor=$_GET['receptor'];
             $query="SELECT * FROM mensaje WHERE (nombreEmisor='$nombreusuario' OR nombreEmisor='$receptor') AND (nombreReceptor='$nombreusuario' OR nombreReceptor='$receptor')";
+            $stringLeer="UPDATE mensaje SET leido=TRUE WHERE nombreReceptor='$nombreusuario' AND nombreEmisor='$receptor'";
+            $update=mysqli_query($conexio,$stringLeer);
             $mensajes=mysqli_query($conexio,$query);
         ?>
         <div class = "chatmessagesbox">
             <center>
-            <div class= "chattitle"><h1>Chat con <?php echo $receptor ?><hr></h1>
+            <div class= "chattitle"><h1>Chat con <a href="../BD243224428/verPerfil.php?nombredeusuario=<?php echo $receptor ?>" class="linkchat"><?php echo $receptor ?></a><hr></h1>
             </div>
             <br><br><br><br>
                     <?php
                         while ($reg=mysqli_fetch_array($mensajes)) {
                             if ($reg["nombreEmisor"]==$nombreusuario) {?>
                                 <p id="boxTransmitter">
-                                    <?php echo $reg["contenido"] ?>
+                                    <?php 
+                                    if ($reg["leido"]==0){
+                                        echo "✓ ";
+                                    }
+                                    else {
+                                        echo "✓✓ ";
+                                    } 
+                                    echo $reg["contenido"];
+                                    ?>
                                 </p>
                             <?php
                             }
