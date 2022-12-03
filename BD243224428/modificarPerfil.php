@@ -4,7 +4,8 @@
         <link rel="stylesheet" type="text/css" href="createAccstyle.css">
     </head>
     <?php
-        $nombreusuarioriginal=$_GET['nombreusuarioriginal'];
+        session_start();
+        $nombreusuarioriginal=$_SESSION["nombreUsuario"];
         $passwordoriginal=$_GET['passwordoriginal'];
         $nombreoriginal=$_GET['nombreoriginal'];
         $apellidosoriginales=$_GET['apellidosoriginales'];
@@ -20,7 +21,7 @@
                             <h2>MODIFICA TU CUENTA</h2><br>
                         </center>
                         <label>Nombre de Usuario (NO MODIFICABLE)</label>
-                        <input type="text" value="<?php echo $nombreusuarioriginal?>", name="nombreUsuario" placeholder="No se puede editar" class="roundborder" required maxlength="20" readonly>
+                        <input type="text" value="<?php echo $nombreusuarioriginal?>", name="nombreUsuario" placeholder="Introduzca su nombre de usuario" class="roundborder" required maxlength="20" readonly>
 
                         <label>Password</label>
                         <input type="password" value="<?php echo $passwordoriginal?>", name="password" placeholder="Introduzca su password" class="roundborder" required maxlength="20">
