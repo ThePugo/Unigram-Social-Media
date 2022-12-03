@@ -31,6 +31,11 @@ input[type=submit] {
     overflow-x: hidden;
 }
 
+.linksmessageUnread{
+    text-decoration: none;
+    color:red;
+}
+
 .linksmessage{
     text-decoration: none;
     color:black;
@@ -110,6 +115,7 @@ textarea{
     font-size: 14px;
 }
 
+/*DERECHA*/
 #boxTransmitter{
     padding:10px;
     right:0px;
@@ -126,6 +132,7 @@ textarea{
     cursor: hand;
 }
 
+/*IZQUIERDA*/
 #boxReceiver{
     padding:10px;
     right:0px;
@@ -140,6 +147,11 @@ textarea{
     margin-top:10px;
     margin-right: auto;
     cursor: hand;
+}
+
+.linkchat{
+    color: blue;
+    text-decoration: none;
 }
 
 
