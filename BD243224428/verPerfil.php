@@ -43,10 +43,7 @@
             #USUARIO PASADO POR PARÁMETRO ES IGUAL AL USUARIO DE LA SESIÓN
             if ($x == $a) {
             ?>
-                <a href="modificarPerfil.php?nombreusuarioriginal=<?php echo $datos["nombreUsuario"]?>
-                &passwordoriginal=<?php echo $datos["password"]?>&nombreoriginal=<?php echo $datos["nombre"]?>
-                &apellidosoriginales=<?php echo $datos["apellidos"]?>&generoriginal=<?php echo $datos["genero"]?>
-                &edadoriginal=<?php echo $datos["edad"]?>&biografiaoriginal=<?php echo $datos["biografia"]?>">
+                <a href="modificarPerfil.php?passwordoriginal=<?php echo $datos["password"]?>&nombreoriginal=<?php echo $datos["nombre"]?>&apellidosoriginales=<?php echo $datos["apellidos"]?>&generoriginal=<?php echo $datos["genero"]?>&edadoriginal=<?php echo $datos["edad"]?>&biografiaoriginal=<?php echo $datos["biografia"]?>">
                     <button id="profileButton">
                         MODIFICAR PERFIL
                     </button>
