@@ -13,19 +13,27 @@
     ?>
 
     <body>
-        <div class="headerbox">  
-            <?php 
-                echo "<h1>Bienvenido, $user</h1>";
+        <div class="headerbox">
+            <div class="headerlogo">  
+                <img src="unigram.png"></img>
+            </div>
+            <div class="headerwelcome">  
+                <?php
+                    echo "<h1>Bienvenido, $user</h1>";
+                ?>
+            </div>
+            <?php
                 #MIRA SI HAY MENSAJES SIN LEER
                 $stringMsj="SELECT COUNT(nombreReceptor) FROM mensaje WHERE nombreReceptor= '$user' AND leido= FALSE";
                 $consultaMsj= mysqli_query($conexio, $stringMsj);
                 $consultaArr = mysqli_fetch_array($consultaMsj);
-            ?>   
+            ?>
+
             <div class="navbar">
                 <ul>
                     <li><a href="BD243224428/verPerfil.php?nombredeusuario=<?php echo $user ?>" class="linksnavbar">Ver mi perfil</a></li>
-                    <li>Mis publicaciones</li>
-                    <li>Mis historias</li>
+                    <li> Mis publicaciones </li>
+                    <li> <a href="BD2X7682807/historias.php" class="linksnavbar"> Mis historias </a></li>
                     <li>Mis followers</li>
                     <li>
                         <?php
@@ -44,10 +52,11 @@
                     </div> 
             </div>  
         </div>
+        
         <div class="postbox">
             <div class="center">
                 <center>
-                    <h1>Publica algo</h1><br>
+                    <h1>Publica algo</h1>
                 </center>
                     <form method="post" action="BD243223476/insertPublicacion.php">
                         <textarea name = "publicacion" required maxlength="255"></textarea><br>
@@ -58,9 +67,10 @@
                     </form>
             </div>
         </div>
+        
         <div class="feed">
             <center>
-                ACTIVIDAD
+                <div class="feedtitle">Mi feed de publicaciones</div>
             </center>
             <?php
                 $stringPublicacion="SELECT * FROM publicacion ORDER BY fechaCreacion DESC";

@@ -24,59 +24,65 @@
     ?>
 
     <div class="profileBox">
-        <div class="profileinfo">
-            <?php echo $x ?><br><br>
-            <?php echo $numPublicaciones["COUNT(nombreUsuario)"] ?> publicacion/es&emsp;●&emsp;
-            <?php echo $numFollowers["COUNT(nombreUsuario2)"] ?> seguidores&emsp;●&emsp;
-            <?php echo $numFollowed["COUNT(nombreUsuario1)"] ?> seguidos
-            <br><br>
-            <?php echo $datos["nombre"].' '.$datos["apellidos"] ?>&emsp;●&emsp;
-            <?php echo $datos["genero"] ?>&emsp;●&emsp;
-            <?php echo $datos["edad"] ?> años
-            <br><br>
-            <p class="biografia"><?php echo $datos["biografia"]?></p>
-        </div>
-        <p class="userimage">
-            <button onclick="location.href = '../principal.php';" id="homeButton"></button>
-        </p>
-        <?php
-            #USUARIO PASADO POR PARÁMETRO ES IGUAL AL USUARIO DE LA SESIÓN
-            if ($x == $a) {
-            ?>
-                <a href="modificarPerfil.php?passwordoriginal=<?php echo $datos["password"]?>&nombreoriginal=<?php echo $datos["nombre"]?>&apellidosoriginales=<?php echo $datos["apellidos"]?>&generoriginal=<?php echo $datos["genero"]?>&edadoriginal=<?php echo $datos["edad"]?>&biografiaoriginal=<?php echo $datos["biografia"]?>">
-                    <button id="profileButton">
-                        MODIFICAR PERFIL
-                    </button>
-                </a>
-            <?php
-            }
-            else {
-                $lesigue=FALSE;
-                while ($listaseguidos=mysqli_fetch_array($query5)) {
-                    if ($listaseguidos["nombreUsuario2"]==$x) {
-                        $lesigue=TRUE;
-                        break;
-                   }
-                }
-                if ($lesigue==FALSE) {
-                ?>
-                    <a href="follow.php?nombredeusuario1=<?php echo $a ?>&nombredeusuario2=<?php echo $x ?>">
-                        <button id="profileButton">
-                            SEGUIR
-                        </button>
-                    </a>
+        <center>
+            <div class="profileinfo">
+                <?php echo "<h1> $x </h1>";?><br>
                 <?php
-                }
-                else {
+                    #USUARIO PASADO POR PARÁMETRO ES IGUAL AL USUARIO DE LA SESIÓN
+                    if ($x == $a) {
+                    ?>
+                        <a href="modificarPerfil.php?passwordoriginal=<?php echo $datos["password"]?>&nombreoriginal=
+                        <?php echo $datos["nombre"]?>&apellidosoriginales=<?php echo $datos["apellidos"]?>&generoriginal=
+                        <?php echo $datos["genero"]?>&edadoriginal=<?php echo $datos["edad"]?>&biografiaoriginal=
+                        <?php echo $datos["biografia"]?>">
+                            <button id="profileButton">
+                                MODIFICAR PERFIL
+                            </button>
+                        </a>
+                    <?php
+                    }
+                    else {
+                        $lesigue=FALSE;
+                        while ($listaseguidos=mysqli_fetch_array($query5)) {
+                            if ($listaseguidos["nombreUsuario2"]==$x) {
+                                $lesigue=TRUE;
+                                break;
+                        }
+                        }
+                        if ($lesigue==FALSE) {
+                        ?>
+                            <a href="follow.php?nombredeusuario1=<?php echo $a ?>&nombredeusuario2=<?php echo $x ?>">
+                                <button id="profileButton">
+                                    SEGUIR
+                                </button>
+                            </a>
+                        <?php
+                        }
+                        else {
+                        ?>
+                            <a href="unfollow.php?nombredeusuario1=<?php echo $a ?>&nombredeusuario2=<?php echo $x ?>">
+                                <button id="profileButtonFollowing">
+                                    SIGUIENDO
+                                </button>
+                            </a>
+                        <?php
+                        }
+                    }
                 ?>
-                    <a href="unfollow.php?nombredeusuario1=<?php echo $a ?>&nombredeusuario2=<?php echo $x ?>">
-                        <button id="profileButtonFollowing">
-                            SIGUIENDO
-                        </button>
-                    </a>
-                <?php
-                }
-            }
-        ?>
+                <br><br>
+                <?php echo $numPublicaciones["COUNT(nombreUsuario)"] ?> publicacion/es&emsp;●&emsp;
+                <?php echo $numFollowers["COUNT(nombreUsuario2)"] ?> seguidores&emsp;●&emsp;
+                <?php echo $numFollowed["COUNT(nombreUsuario1)"] ?> seguidos
+                <br><br>
+                <?php echo $datos["nombre"].' '.$datos["apellidos"] ?>&emsp;●&emsp;
+                <?php echo $datos["genero"] ?>&emsp;●&emsp;
+                <?php echo $datos["edad"] ?> años
+                <?php echo "<br><br> <h2>Acerca de mi</h2>"?>
+                <p class="biografia"><?php echo $datos["biografia"]?></p>
+            </div>
+            <img src="user.png" height="150px"></img>
+            <hr class="round">
+        </center>
     </div>
+    <button onclick="location.href = '../principal.php';" id="homeButton"></button>
 </html>

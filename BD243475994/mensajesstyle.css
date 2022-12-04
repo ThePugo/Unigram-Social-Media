@@ -126,9 +126,10 @@ textarea{
     border: 2px solid;
     border-color: #0E0E52;
     background-color: lightsteelblue;
-    border-radius: 10px;
+    border-radius: 1.125rem  1.125rem 0 1.125rem ;
     margin-top:10px;
     margin-left: auto;
+    margin-right: 30px;
     cursor: hand;
 }
 
@@ -143,9 +144,10 @@ textarea{
     border: 2px solid;
     border-color: #0E0E52;
     background-color: white;
-    border-radius: 10px;
+    border-radius:  1.125rem  1.125rem 1.125rem 0;
     margin-top:10px;
     margin-right: auto;
+    margin-left: 30px;
     cursor: hand;
 }
 
