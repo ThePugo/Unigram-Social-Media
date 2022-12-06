@@ -5,7 +5,7 @@
             include "mensajes.php";
             include "../conexiones.php";
             $receptor=$_GET['receptor'];
-            $query="SELECT * FROM mensaje WHERE (nombreEmisor='$nombreusuario' OR nombreEmisor='$receptor') AND (nombreReceptor='$nombreusuario' OR nombreReceptor='$receptor')";
+            $query="SELECT * FROM mensaje WHERE (nombreEmisor='$nombreusuario' OR nombreEmisor='$receptor') AND (nombreReceptor='$nombreusuario' OR nombreReceptor='$receptor') ORDER BY idMensaje ASC";
             $stringLeer="UPDATE mensaje SET leido=TRUE WHERE nombreReceptor='$nombreusuario' AND nombreEmisor='$receptor'";
             $update=mysqli_query($conexio,$stringLeer);
             $mensajes=mysqli_query($conexio,$query);

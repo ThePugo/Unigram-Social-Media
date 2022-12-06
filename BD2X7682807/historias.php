@@ -7,10 +7,10 @@
 
     <body>
         <div class="headerbox">
-            Hola
+            <div class="headertitle"><h1>Mis historias</h1></div>
         </div>
         <div class="storybox">
-            Hola
+            <div class="storytitle"><h1>Crea aqui tu historia</h1></div>
         </div>
     </body>
 </html>
