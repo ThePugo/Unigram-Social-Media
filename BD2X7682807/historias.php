@@ -11,6 +11,9 @@
         </div>
         <div class="storybox">
             <div class="storytitle"><h1>Crea aqui tu historia</h1></div>
+            <center>
+                <button onclick="location.href = 'crearHistoriaForm.html';">CREAR</button>
+            </center>
         </div>
     </body>
 </html>
