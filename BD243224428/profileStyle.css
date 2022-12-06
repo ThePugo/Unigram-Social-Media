@@ -27,6 +27,14 @@ body {
     top:65px;
 }
 
+.profileinfo2{
+    left:38%;
+    padding-top: 10px;
+    margin-top: 160px;
+    color:white;
+    top:65px;
+}
+
 #profileButton{
     color: steelblue;
     font-family: "Bahnschrift";
@@ -78,6 +86,7 @@ body {
 
 .biografia {
     word-break: break-word;
+    margin-top: 10px;
     color:white;
  }
 

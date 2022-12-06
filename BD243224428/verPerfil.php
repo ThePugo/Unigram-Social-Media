@@ -25,6 +25,8 @@
 
     <div class="profileBox">
         <center>
+            <img src="user.png" height="150px"></img>
+            <hr class="round">
             <div class="profileinfo">
                 <?php echo "<h1> $x </h1>";?><br>
                 <?php
@@ -71,14 +73,14 @@
                 <?php echo $numFollowers["COUNT(nombreUsuario2)"] ?> seguidores&emsp;●&emsp;
                 <?php echo $numFollowed["COUNT(nombreUsuario1)"] ?> seguidos
                 <br><br>
+                </div>
+                <div class="profileinfo2">
                 <?php echo $datos["nombre"].' '.$datos["apellidos"] ?>&emsp;●&emsp;
                 <?php echo $datos["genero"] ?>&emsp;●&emsp;
                 <?php echo $datos["edad"] ?> años
                 <?php echo "<br><br> <h2>Acerca de mi</h2>"?>
+                </div>
                 <p class="biografia"><?php echo $datos["biografia"]?></p>
-            </div>
-            <img src="user.png" height="150px"></img>
-            <hr class="round">
         </center>
     </div>
     <button onclick="location.href = '../principal.php';" id="homeButton"></button>
