@@ -58,38 +58,88 @@
                 <center>
                     <h1>Publica algo</h1>
                 </center>
-                    <form method="post" action="BD243223476/insertPublicacion.php">
-                        <textarea name = "publicacion" required maxlength="255"></textarea><br>
-                        <center>
-                            <input type="submit" value="Publicar" class="roundborder">
-                        </center>
-                        <input type="hidden" value=<?php echo $user?> name="nombreUsuario">
-                    </form>
+                <form method="post" action="BD243223476/insertPublicacion.php">
+                    <textarea name = "publicacion" required maxlength="255"></textarea><br>
+                    <center>
+                        <?php
+                        $stringElegirHist="SELECT * FROM historia WHERE nombreUsuario=\"$user\"";
+                        $stories=mysqli_query($conexio,$stringElegirHist);
+                        ?>
+                        <br><label><h3>Elige historia</h3></label>
+                        <select name="elegirhist">
+                            <option value="NULL">Sin historia</option>
+                            <?php while($regH=mysqli_fetch_array($stories)){
+                            ?>
+                            <option value="<?php echo $regH["idHistoria"];?>">
+                                <?php echo "Historia #",$regH["idHistoria"];?>
+                            </option>
+                            <?php
+                                }
+                            ?>
+                        </select>
+                        <br><br><input type="submit" value="Publicar" class="roundborder">
+                    </center>
+                </form>
             </div>
         </div>
         
         <div class="feed">
             <center>
-                <div class="feedtitle">Mi feed de publicaciones</div>
+                <div class="feedtitle">Mi feed</div>
             </center>
-            <?php
-                $stringPublicacion="SELECT * FROM publicacion ORDER BY fechaCreacion DESC";
-                $publicaciones=mysqli_query($conexio,$stringPublicacion);
-                while($reg=mysqli_fetch_array($publicaciones)){
-            ?>
-            <div class="post">
+            <div class="postsfeed">
+                <center>
+                <h3>Publicaciones</h3>
+                </center>
                 <?php
-                    $nusuario=$reg["nombreUsuario"];
-                    #ENLACE A PERFIL?>
-                    <a href="BD243224428/verPerfil.php?nombredeusuario=<?php echo $nusuario ?>" class="linksposts"><?php echo $nusuario ?></a><br><br>
-                    <?php echo $reg["descripcion"];?>
-                    <div class="date">
-                        <?php echo $reg["fechaCreacion"];?>
-                    </div>
+                    # Mostrar PUBLICACIONES que no pertenecen a HISTORIAS
+                    $stringPublicacion="SELECT * FROM publicacion WHERE idHistoria IS NULL ORDER BY fechaCreacion DESC";
+                    $publicaciones=mysqli_query($conexio,$stringPublicacion);
+                    while($reg=mysqli_fetch_array($publicaciones)){
+                ?>
+                <div class="post">
+                    <?php
+                        $nusuario=$reg["nombreUsuario"];
+                        #ENLACE A PERFIL?>
+                        <a href="BD243224428/verPerfil.php?nombredeusuario=<?php echo $nusuario ?>" class="linksposts"><?php echo $nusuario ?></a><br><br>
+                        <?php echo $reg["descripcion"];?>
+                        <div class="date">
+                            <?php echo $reg["fechaCreacion"];?>
+                        </div>
+                </div>
+                <?php
+                    }
+                ?>
             </div>
-            <?php
-                }
-            ?>
+            
+            <div class="storiesfeed">
+                <center>
+                <h3>Historias</h3>
+                </center>
+                <?php
+                    # Mostrar HISTORIAS PUBLICAS
+                    $stringHistoria="SELECT * FROM historia WHERE privada=0";
+                    $historias=mysqli_query($conexio,$stringHistoria);
+                    while($reg1=mysqli_fetch_array($historias)){
+                ?>
+                <div class="story">
+                    <?php
+                        $storyuser=$reg1["nombreUsuario"];
+                        echo "<h3>Historia #",$reg1["idHistoria"]," de ",$storyuser,"</h3><br>";
+                    ?>
+                    <div class="desc">
+                        <?php echo $reg1["descripcion"]?>
+                    </div>
+                    <div class="storydate">
+                        <?php echo $reg1["fechaHistoria"]?>
+                    </div>
+                    <button id="seepostsbutton"><a href="BD2X7682807/verHistoria.php?id=<?php echo $reg1["idHistoria"];?>"
+                        class="linksnavbar">Ver publicaciones</a></button>
+                </div>
+                <?php
+                    } 
+                ?>
+            </div>
         </div>
     </body>
 </html>

@@ -26,7 +26,7 @@
     position: relative;
     top: 169px;
     width: 100%;
-    height: 250px;
+    height: 360px;
     color: #0E0E52;
 }
 
@@ -44,6 +44,7 @@
     color:blue;
     text-decoration:none;
 }
+
 
 .navbar{
     margin-top: 30px;
@@ -73,12 +74,25 @@
 
 .feedtitle{
     padding-top: 25px;
+    padding-bottom: 15px;
 }
+
+.postsfeed{
+    display: inline-block;
+    width: 50%;
+}
+
+.storiesfeed{
+    width: 50%;
+    float: right;
+    padding-right: 10px;
+}
+
 .post{
-    width:1350px;
+    width: 85%;
     display:block;
     overflow: hidden;
-    background: #fff;
+    background-color: white;
     border-radius:4px;
     color:black;
     font-size:14pt;
@@ -87,7 +101,33 @@
     margin-top: 30px;
     break-inside:avoid;
     padding-left: 10px;
+    padding-top: 10px;
+}
+
+.story{
+    width:85%;
+    display:block;
+    overflow: hidden;
+    background-color: white;
+    border-radius:4px;
+    color:black;
+    font-size:14pt;
+    box-shadow:1px 1px 8px rgba(0,0,0,.2);
+    margin:0 60px 20px;
+    margin-top: 30px;
+    break-inside:avoid;
+    padding-left: 15px;
     padding-top: 15px;
+}
+
+.desc{
+    margin-bottom: 10px;
+}
+
+.storydate{
+    float:right;
+    margin:10px;
+    margin-top: 35px;
 }
 
 .date{
@@ -98,6 +138,18 @@
 .roundborder{
     padding: 10px;
     border-radius: 10px;
+}
+
+#seepostsbutton{
+    appearance: none;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color:  #0E0E52;
+    border-radius: 10px;
+    border: none;
+    color:white;
+    width:150px;
 }
 
 body{
@@ -144,6 +196,13 @@ input[type=submit]{
     margin-top: 5px;
     color: white;
     background-color: #0E0E52;
+}
+
+select{
+    border-radius: 10px;
+    width: 150px;
+    padding: 5px;
+    margin-top: 10px;
 }
 
 .cerrarsesionli{

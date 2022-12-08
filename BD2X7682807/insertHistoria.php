@@ -8,11 +8,12 @@
         include "../conexiones.php";
 
         $privada = $_POST["priv"];
-        if($privada == "Publica"){
-            $privada == 0;
+       
+        if($privada == "0"){
+            $privada = false;
         }
-        else{
-            $privada == 1;
+        else if($privada == "1"){
+            $privada = true;
         }
         $descripcion = $_POST["desc"];
         date_default_timezone_set('Europe/Madrid');
@@ -20,5 +21,6 @@
 
         $string= "INSERT into historia set privada= \"$privada\", descripcion= \"$descripcion\", fechaHistoria=\"$fechaHistoria\", nombreUsuario=\"$user\"";
         $insert = mysqli_query($conexio,$string);
+        echo "Creando historia..."
     ?>
 </html>
