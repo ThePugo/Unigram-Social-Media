@@ -7,7 +7,7 @@
     include "../conexiones.php";
     session_start();
     $nombreUsuario=$_SESSION['nombreUsuario'];
-    $query="SELECT * FROM publicacion WHERE nombreUsuario='$nombreUsuario'";
+    $query="SELECT * FROM publicacion WHERE nombreUsuario='$nombreUsuario' ORDER BY fechaCreacion DESC";
     $consulta=mysqli_query($conexio,$query);?>
     <button onclick="location.href = '../principal.php';" style="position:relative;border:none;background-color:lightsteelblue;"><img src="../BD243224428/home.png" height="50px"></img></button>
     <center><h1>Mis publicaciones</h1></center>
