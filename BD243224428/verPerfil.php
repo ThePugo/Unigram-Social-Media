@@ -95,7 +95,7 @@
             </center>
             <?php
                 # Mostrar PUBLICACIONES
-                $stringPublicacion="SELECT * FROM publicacion WHERE nombreUsuario='$x' AND idHistoria IS NULL ORDER BY fechaCreacion";
+                $stringPublicacion="SELECT * FROM publicacion WHERE nombreUsuario='$x' AND idHistoria IS NULL ORDER BY fechaCreacion DESC";
                 $publicaciones=mysqli_query($conexio,$stringPublicacion);
                 while($reg=mysqli_fetch_array($publicaciones)){
             ?>
