@@ -10,6 +10,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #0E0E52;
   }
 
 .profileBox{
@@ -96,7 +97,6 @@ hr.round{
 }
 
 #userbox{
-    color: #0E0E52;
     font-family: "Bahnschrift";
     font-size: 10pt;
     background-color: #ffffff;
@@ -217,13 +217,3 @@ h2{
 h3 {
     color:white;
 }
-
- /**
-.profileNavBar{
-
-}
-
-.profileFeed{
-
-}
-/**
