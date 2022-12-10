@@ -11,6 +11,7 @@
     width: 100%;
     padding-top: 30px;
     color: #0E0E52;
+    background-color: white;
 }
 
 .headerwelcome{
@@ -157,6 +158,7 @@ body{
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-color: #0E0E52;
 }
 
 img{
