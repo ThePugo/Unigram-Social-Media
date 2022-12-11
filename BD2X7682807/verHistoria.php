@@ -17,9 +17,8 @@
     ?>
     <div class="nopostsmessage">
         <div class="center">
-            <h1>¡Vaya! Esta historia no tiene publicaciones aun</h1>
+            <h1>¡Vaya! Esta historia no tiene publicaciones aun</h1><br>
             <center>
-                <h2>Prueba con crear una</h2><br>
                 <button id="createbutton" onclick="location.href = '../principal.php';">Volver a Pagina Principal</button>
             </center>
         </div>

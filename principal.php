@@ -61,7 +61,7 @@
                     <h1>Publica algo</h1>
                 </center>
                 <form method="post" action="BD243223476/insertPublicacion.php">
-                    <textarea name = "publicacion" required maxlength="255"></textarea><br>
+                    <textarea id="posttextarea" name = "publicacion" required maxlength="255"></textarea><br>
                     <center>
                         <?php
                         $stringElegirHist="SELECT * FROM historia WHERE nombreUsuario=\"$user\"";
@@ -105,10 +105,26 @@
                     <?php
                         $nusuario=$reg["nombreUsuario"];
                         #ENLACE A PERFIL?>
-                        <a href="BD243224428/verPerfil.php?nombredeusuario=<?php echo $nusuario ?>" class="linksposts"><?php echo $nusuario ?></a><br><br>
-                        <?php echo $reg["descripcion"];?>
+                        <div class="postuser">
+                            <a href="BD243224428/verPerfil.php?nombredeusuario=<?php echo $nusuario ?>" class="linksposts"><?php echo $nusuario ?></a><br><br>
+                        </div>
+                        <div class="postdesc">
+                            <?php echo $reg["descripcion"];?>
+                        </div>
                         <div class="date">
                             <?php echo $reg["fechaCreacion"];?>
+                        </div>
+                        <button id="seerepliesbutton"><a href="BD243223476/verRespuestas.php?id=<?php echo $reg["idPublicacion"];?>"
+                                class="linksnavbar">Ver Respuestas</a></button>
+                        <div class="replybox">
+                            <form method="post" action="BD243223476/insertRespuesta.php">
+                                <textarea id="replytextarea" name = "respuesta" required maxlength="255"></textarea><br>
+                                <input type="hidden" name="idPublicacion" value=<?php echo $reg["idPublicacion"] ?>>
+                                <div class ="replybutton">
+                                    <input type="submit" value="Responder" class="roundborder">
+                                </div>
+                            </form>
+                                                      
                         </div>
                 </div>
                 <?php
