@@ -104,10 +104,23 @@
                 <div class="post">
                     <?php
                         $nusuario=$reg["nombreUsuario"];
-                        #ENLACE A PERFIL?>
+                        #ENLACE A PERFIL, Si es un reenvio sale "Reenviado por"?>
+                        <?php if($reg["idPublicacion2"] != ""){
+                        ?>
+                        <div class="postuser">
+                            <b>Reenviado por </b><a href="BD243224428/verPerfil.php?nombredeusuario=<?php echo $nusuario ?>" class="linksposts"><?php echo $nusuario ?></a><br><br>
+                        </div>
+                        <?php 
+                            }
+                            else{
+                        ?>
                         <div class="postuser">
                             <a href="BD243224428/verPerfil.php?nombredeusuario=<?php echo $nusuario ?>" class="linksposts"><?php echo $nusuario ?></a><br><br>
                         </div>
+                        <?php
+                            }
+                        ?>
+                        
                         <div class="postdesc">
                             <?php echo $reg["descripcion"];?>
                         </div>
@@ -116,6 +129,7 @@
                         </div>
                         <button id="seerepliesbutton"><a href="BD243223476/verRespuestas.php?id=<?php echo $reg["idPublicacion"];?>"
                                 class="linksnavbar">Ver Respuestas</a></button>
+                        
                         <div class="replybox">
                             <form method="post" action="BD243223476/insertRespuesta.php">
                                 <textarea id="replytextarea" name = "respuesta" placeholder="Redacta tu respuesta" required maxlength="255"></textarea><br>
@@ -124,7 +138,22 @@
                                     <input type="submit" value="Responder" class="roundborder">
                                 </div>
                             </form>
-                                                      
+                            <?php if($reg["idPublicacion2"] == ""){
+                            ?>
+                            <div class="reenvio">
+                                <a href="BD243223476/insertReenvio.php?id1=<?php echo $reg["idPublicacion"]?>&id2=<?php echo $reg["descripcion"]?>">   
+                                    <button id="reenviarbutton"></button>
+                                </a>
+                            </div>
+                            <?php
+                                }
+                                else {?>
+                                <div class="reenvio">
+                                    <button id="reenviadobutton"></button><div class="reenviado">¡Reenviado!</div> 
+                                </div>
+                                <?php
+                                }
+                            ?>               
                         </div>
                 </div>
                 <?php

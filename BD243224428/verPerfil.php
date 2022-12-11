@@ -153,4 +153,7 @@
                 ?>
         </div>
     </div>
+    <head>
+        <meta http-equiv="refresh" content="30;url=verPerfil.php?nombredeusuario=<?php echo $x ?>" />
+    </head>
 </html>

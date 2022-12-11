@@ -156,6 +156,40 @@
     width:150px;
 }
 
+.reenvio{
+    padding-left: 20px;
+}
+
+.reenviado{
+    float: right;
+    color: green;
+    padding-top: 15px;
+    padding-right: 450px;
+}
+
+#reenviarbutton{
+    background-image: url(BD243223476/reenvio.png);
+    background-repeat: no-repeat;
+    background-color: lightsteelblue;
+    border:none;
+    background-size: 50px;
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+
+#reenviadobutton{
+    background-image: url(BD243223476/reenviado.png);
+    background-repeat: no-repeat;
+    background-color: lightsteelblue;
+    border:none;
+    background-size: 50px;
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+
+
 .story{
     width:85%;
     display:block;
@@ -184,7 +218,7 @@
 
 .date{
     float:right;
-    margin-top:30px;
+    margin-top:50px;
     margin-right: 10px;
 }
 
