@@ -1,0 +1,43 @@
+DELIMITER //
+
+CREATE trigger borrarPublicacion
+BEFORE DELETE on publicacion FOR EACH ROW
+BEGIN
+DECLARE acabar INT DEFAULT FALSE;
+DECLARE resp_aux int;
+
+DECLARE varcursor CURSOR for SELECT idRespuesta from respuesta where idPublicacion = OLD.idPublicacion;
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET acabar=TRUE;
+OPEN varcursor;
+etq: LOOP
+	FETCH varcursor into resp_aux;
+	if acabar then 
+    	leave etq;
+     end IF;
+    DELETE FROM respuesta WHERE idRespuesta=resp_aux;
+end loop;
+CLOSE varcursor;
+
+END;
+
+DELIMITER //
+
+CREATE trigger borrarHistoria
+BEFORE DELETE on historia FOR EACH ROW
+BEGIN
+DECLARE acabar INT DEFAULT FALSE;
+DECLARE pub_aux int;
+
+DECLARE varcursor CURSOR for SELECT idPublicacion from publicacion where idHistoria = OLD.idHistoria;
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET acabar=TRUE;
+OPEN varcursor;
+etq: LOOP
+	FETCH varcursor into pub_aux;
+	if acabar then 
+    	leave etq;
+     end IF;
+    DELETE FROM publicacion WHERE idRespuesta=pub_aux;
+end loop;
+CLOSE varcursor;
+
+END;
