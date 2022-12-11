@@ -149,7 +149,7 @@
                                 }
                                 else {?>
                                 <div class="reenvio">
-                                    <button id="reenviadobutton"></button><div class="reenviado">¡Reenviado!</div> 
+                                    <button id="reenviadobutton"></button>
                                 </div>
                                 <?php
                                 }
