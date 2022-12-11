@@ -26,6 +26,25 @@ body {
     padding-top: 15px;
 }
 
+.norepliesmessage{
+    margin: 100px;
+    margin-left: 350px;
+    margin-right: 350px;
+    border-radius: 10px;
+    height: 500px;
+    background-color: white;
+    color:black;
+}
+
+.center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50% );
+}
+
 .date{
     float:right;
     margin:5px;
@@ -36,7 +55,7 @@ body {
     text-decoration:none;
 }
 
-h1 {
+.repliestitle {
     margin-top: 20px;
     color: white;
 }
@@ -48,4 +67,31 @@ button {
 
 img {
     position: absolute;
+}
+
+
+#returnbutton{
+    appearance: none;
+    font-weight: bold;
+    font-size: 3vh;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color:  white;
+    border-radius: 10px;
+    border: none;
+    color: #0E0E52;
+    width:300px;
+}
+
+#norepliesreturn{
+    appearance: none;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+    background-color:  #0E0E52;
+    border-radius: 10px;
+    border: none;
+    color:white;
+    width:200px;
 }

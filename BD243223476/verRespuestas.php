@@ -10,15 +10,28 @@
     session_start();
     $idPubli = $_GET["id"];
     $query = "SELECT * FROM respuesta WHERE idPublicacion='$idPubli' ORDER BY fechaRespuesta DESC";
-    $consulta = mysqli_query($conexio,$query); 
-    ?>
+    $consulta = mysqli_query($conexio,$query);
 
-    <button onclick="location.href = '../principal.php';" style="position:relative;border:none;background-color:lightsteelblue;"><img src="../BD243224428/home.png" height="50px"></img></button>
-    <center><h1>Respuestas</h1></center>
+    # Ver si en la publicacion hay respuestas o no
+    $numrows = mysqli_num_rows($consulta);
+    if($numrows == 0){
+    ?>
+    <div class="norepliesmessage">
+        <div class ="center">
+            <h1>¡Vaya! No hay respuestas a esta publicacion aun</h1><br>
+            <center>
+                <button id="norepliesreturn" onclick="location.href = '../principal.php';">Volver a Pagina Principal</button>
+            </center>
+        </div>
+    </div>
+    <?php }
+        else{
+    ?>
+    <center><div class="repliestitle"><h1>Respuestas</h1></div></center>
     <?php
-    while($reg=mysqli_fetch_array($consulta)) {
-        ?>
-        <div class="replybox">
+            while($reg=mysqli_fetch_array($consulta)) {
+    ?>
+    <div class="replybox">
             <?php
                 $nusuario=$reg["nombreUsuario"];
                 #ENLACE A PERFIL?>
@@ -28,7 +41,13 @@
                     <?php echo $reg["fechaRespuesta"];?>
                 </div>
         </div>
-        <?php
-            }
+    <?php
+         }
+    ?>
+    <center>
+        <button id="returnbutton" onclick="location.href = '../principal.php';">Volver a Pagina principal</button>
+    </center>
+    <?php
+        }
     ?>
 </html>

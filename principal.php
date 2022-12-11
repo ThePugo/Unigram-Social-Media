@@ -58,16 +58,16 @@
         <div class="postbox">
             <div class="center">
                 <center>
-                    <h1>Publica algo</h1>
+                    <h1>Crear publicacion</h1>
                 </center>
                 <form method="post" action="BD243223476/insertPublicacion.php">
-                    <textarea id="posttextarea" name = "publicacion" required maxlength="255"></textarea><br>
+                    <textarea id="posttextarea" name = "publicacion" placeholder="Redacta tu publicacion" required maxlength="255"></textarea><br>
                     <center>
                         <?php
                         $stringElegirHist="SELECT * FROM historia WHERE nombreUsuario=\"$user\"";
                         $stories=mysqli_query($conexio,$stringElegirHist);
                         ?>
-                        <br><label><h3>Elige historia</h3></label>
+                        <br><label><h3>Añádela a una historia</h3></label>
                         <select name="elegirhist">
                             <option value="NULL">Sin historia</option>
                             <?php while($regH=mysqli_fetch_array($stories)){
@@ -118,7 +118,7 @@
                                 class="linksnavbar">Ver Respuestas</a></button>
                         <div class="replybox">
                             <form method="post" action="BD243223476/insertRespuesta.php">
-                                <textarea id="replytextarea" name = "respuesta" required maxlength="255"></textarea><br>
+                                <textarea id="replytextarea" name = "respuesta" placeholder="Redacta tu respuesta" required maxlength="255"></textarea><br>
                                 <input type="hidden" name="idPublicacion" value=<?php echo $reg["idPublicacion"] ?>>
                                 <div class ="replybutton">
                                     <input type="submit" value="Responder" class="roundborder">

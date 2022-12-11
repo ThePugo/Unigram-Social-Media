@@ -14,7 +14,8 @@ body{
 }
 
 .registerbox{
-    color: darkblue;
+    text-decoration: none;
+    color:#0E0E52;
     font-weight: bold;
 }
 
