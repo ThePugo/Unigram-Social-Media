@@ -60,4 +60,4 @@ BEGIN
         INSERT INTO mensaje VALUES(null,concat('Mira mi nueva historia: http://localhost/bd203/BD2X7682807/verHistoria.php?id=',NEW.idHistoria),0,NEW.nombreUsuario,a);
         END LOOP;
         CLOSE varcursor;
-END
+END;
