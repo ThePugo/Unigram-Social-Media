@@ -36,7 +36,7 @@ etq: LOOP
 	if acabar then 
     	leave etq;
      end IF;
-    DELETE FROM publicacion WHERE idRespuesta=pub_aux;
+    DELETE FROM publicacion WHERE idPublicacion=pub_aux;
 end loop;
 CLOSE varcursor;
 
