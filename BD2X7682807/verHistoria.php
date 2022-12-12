@@ -29,12 +29,26 @@
         while($reg = mysqli_fetch_array($posts)){
     ?>     
     <div class="poststorybox">
-        <h2><a href="../BD243224428/verPerfil.php?nombredeusuario=<?php echo $reg["nombreUsuario"] ?>" class="linksposts"><?php echo $reg["nombreUsuario"]?></a></h2>
+        <div class="user">
+            <h2><a href="../BD243224428/verPerfil.php?nombredeusuario=<?php echo $reg["nombreUsuario"] ?>" 
+            class="linksposts"><?php echo $reg["nombreUsuario"]?></a></h2>
+        </div>
         <div class="desc">
             <?php echo $reg["descripcion"];?>
         </div>
         <div class="date">
             <?php echo $reg["fechaCreacion"];?>
+        </div>
+        <button id="seerepliesbutton"><a href="../BD243223476/verRespuestas.php?id=<?php echo $reg["idPublicacion"];?>"
+                                class="replylink">Ver Respuestas</a></button>
+        <div class="replybox">
+            <form method="post" action="../BD243223476/insertRespuesta.php">
+            <textarea id="replytextarea" name = "respuesta" placeholder="Redacta tu respuesta" required maxlength="255"></textarea><br>
+            <input type="hidden" name="idPublicacion" value=<?php echo $reg["idPublicacion"] ?>>
+            <div class ="replybutton">
+                <input type="submit" value="Responder" class="roundborder">
+            </div>
+            </form>
         </div>
     </div>
     <?php

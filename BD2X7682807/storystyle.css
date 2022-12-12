@@ -53,6 +53,12 @@ body{
     padding-top: 15px;
 }
 
+.replybox{
+    height: 125px;
+    position: relative;
+    background-color: lightsteelblue;
+}
+
 .poststorybox{
     width: 85%;
     display:block;
@@ -65,9 +71,9 @@ body{
     margin:0 60px 20px;
     margin-top: 30px;
     break-inside:avoid;
-    padding-left: 10px;
     padding-top: 10px;
 }
+
 
 .publicstory{
     color:rgb(15, 197, 15);
@@ -91,8 +97,13 @@ body{
     color:black;
 }
 
+.user{
+    padding-left: 10px;
+}
+
 .desc{
     margin-top: 5px;
+    padding-left: 10px;
 }
 
 .date{
@@ -110,9 +121,29 @@ body{
     transform: translate(-50%,-50% );
 }
 
+.replybutton{
+    margin-left: 460px;
+    padding-bottom: 10px;
+}
+
+.replylinks{
+    color: white;
+    text-decoration: none;
+}
+
 a{
     color:white;
     text-decoration: none;
+}
+
+#replytextarea{
+    overflow: hidden;
+    padding:10px;
+    border-radius: 10px;
+    width: 95%;
+    resize: none;
+    height: 35px;
+    margin:15px;
 }
 
 #homebutton {
@@ -152,6 +183,19 @@ a{
     width:150px;
 }
 
+#seerepliesbutton{
+    appearance: none;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color:  #0E0E52;
+    border-radius: 10px;
+    border: none;
+    color:white;
+    width:150px;
+}
+
 #returnbutton{
     appearance: none;
     font-weight: bold;
@@ -164,4 +208,13 @@ a{
     border: none;
     color: #0E0E52;
     width:300px;
+}
+
+input[type=submit]{
+    margin-left: 610px;
+    border-radius: 10px;
+    height: 35px;
+    width: 150px;
+    color: white;
+    background-color: #0E0E52;
 }
