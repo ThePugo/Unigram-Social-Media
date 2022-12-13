@@ -1,7 +1,7 @@
 <html>
     <!-- INSERTA EN LA BASE DE DATOS (CON SQL) LOS DATOS QUE ENCUENTRA EN EL FORM-->
     <head>
-        <meta http-equiv="refresh" content="2;url=../BD2X7682807/login.html" />
+        <meta http-equiv="refresh" content="0;url=../BD2X7682807/login.html" />
     </head>
     <?php
         $nombreUsuario=$_POST["nombreUsuario"];
@@ -26,7 +26,6 @@
         <?php
         }
         else {
-            echo "Creando cuenta de usuario...";
             $insert=mysqli_query($conexio,$string);
         }
     ?>
