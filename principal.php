@@ -3,6 +3,7 @@
     <head>
         <title>Pagina principal</title>
         <link rel="stylesheet" type="text/css" href="principalstyle.css">
+        <meta http-equiv="refresh" content="30;url=principal.php"/>
     </head>
 
 
