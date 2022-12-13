@@ -16,3 +16,8 @@ CREATE PROCEDURE backUp()
         INSERT into r_follower_backup SELECT * FROM r_follower;
         INSERT into usuario_backup SELECT * FROM usuario;
 	END;
+
+DELIMITER //
+CREATE EVENT crear_backup
+ON SCHEDULE every 24 hour STARTS CURRENT_TIMESTAMP
+DO EXECUTE backUp;
