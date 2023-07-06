@@ -1,5 +1,5 @@
 # Unigram Social Media
-Social media created using HTML, CSS and PHP for the subject BD II in the 2022-23 course<br />
+Social media created using HTML, CSS and PHP and connected to a SQL database for the subject BD II during the 2022-23 course<br />
 
 ![Preview image](unigram.png)
 
