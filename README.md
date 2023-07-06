@@ -1,11 +1,11 @@
-# Practica 2 - BD II
-Creacion de una red social para la asignatura BD II<br />
+# Unigram Social Media
+Social media created using HTML, CSS and PHP for the subject BD II in the 2022-23 course<br />
 
 ![Preview image](unigram.png)
 
-## Reparto de tareas 
-Login de usuarios & Historias - Arya Mangunsatya I Gusti Ngurah Agung - Carpeta BDX7682807<br />
-Creación de cuenta & Perfiles - Sasha Cammarata San Segundo - Carpeta BD243224428<br />
-Publicaciones - Mario Ventura Burgos - Carpeta BD243223476<br />
-Mensajes - José Enrique Sánchez Weiss - Carpeta BD243475994
+## Authors
+User logins & Stories - Arya Mangunsatya I Gusti Ngurah Agung - BDX7682807<br />
+Account creation & Profiles - Sasha Cammarata San Segundo - BD243224428<br />
+Posts - Mario Ventura Burgos - BD243223476<br />
+Messages - José Enrique Sánchez Weiss - BD243475994
 
