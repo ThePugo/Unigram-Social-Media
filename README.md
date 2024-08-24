@@ -4,8 +4,8 @@ Social media created using HTML, CSS and PHP and connected to a SQL database for
 ![Preview image](unigram.png)
 
 ## Authors
-User logins & Stories - Arya Mangunsatya I Gusti Ngurah Agung - BDX7682807<br />
-Account creation & Profiles - Sasha Cammarata San Segundo - BD243224428<br />
-Posts - Mario Ventura Burgos - BD243223476<br />
-Messages - José Enrique Sánchez Weiss - BD243475994
+User logins & Stories - Arya Mangunsatya I Gusti Ngurah Agung - BD21<br />
+Account creation & Profiles - Sasha Gavilán San Segundo - BD22<br />
+Posts - Mario Ventura Burgos - BD23<br />
+Messages - José Enrique Sánchez Weiss - BD24
 
